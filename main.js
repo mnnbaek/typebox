@@ -114,23 +114,19 @@
     };
 
     const handleTyping = (event) => {
-        // Sai mais cedo para teclas especiais que não devem iniciar o jogo ou ser processadas como digitação.
         if (event.key.length > 1 && event.key !== 'Backspace') {
             return;
         }
 
-        // Lida com o backspace separadamente, não deve iniciar o jogo.
         if (event.key === 'Backspace') {
             handleBackspace();
             return;
         }
 
-        // Não deixa o usuário iniciar o teste pressionando espaço.
         if (!gameData.isGameStarted && event.key === ' ') {
             return;
         }
 
-        // Se todas as verificações passarem, temos um caractere válido. Agora podemos iniciar o jogo e tocar sons.
         if (isSoundEnabled) {
             keyboardSound.play();
         }
