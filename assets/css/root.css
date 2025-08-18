@@ -1,0 +1,23 @@
+:root {
+    /* Color Palette */
+    --color-text: #1a1a1a;
+    --color-text-light: #e0e0e0;
+    --color-text-muted: rgba(224, 224, 224, 0.3);
+    --color-background: #DFDBE5;
+    --color-background-dark: #2d3748;
+    --color-primary: #4a90e2;
+    --color-secondary: #f59e0b;
+    --color-surface: rgba(0, 0, 0, 0.1);
+    --color-border: rgba(255, 255, 255, 0.05);
+
+    /* State Colors */
+    --color-correct: oklch(82.8% 0.189 84.429);
+    --color-incorrect: #d9534f;
+    --color-success: #4CAF50;
+    --color-success-hover: #45a049;
+    --color-danger: #f44336;
+    --color-danger-hover: #da190b;
+
+    /* Typography */
+    --font-main: 'IBM Plex Mono', monospace;
+}
