@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>typebox ― verbeter je typesnelheid in het Nederlands</title>
-    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+    <title>Typebox ― verbeter je typesnelheid in het Nederlands</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Tailwind for styling -->
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <!-- Add Chart.js for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-    <link rel="stylesheet" href="./style.css" type="text/css">
     <!-- Add Howler.js for audio library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
 </head>
@@ -27,35 +28,31 @@
     </div>
 
     <main class="flex flex-col items-center justify-center p-4">
-        <!-- Main title and subtitle -->
         <h1 class="text-6xl font-bold text-gray-100 mb-8 opacity-0 -translate-y-4" id="title">
-            <span class="text-amber-400">type</span>box
+            <span class="text-amber-400">Type</span>box
         </h1>
         <p class="text-lg text-gray-400 opacity-0 -translate-y-4" id="subtitle">Verbeter je typesnelheid in het Nederlands</p>
         <p class="text-lg text-gray-400 mb-12 opacity-0 -translate-y-4 underline" id="subtitle">
-            Geprototyped door <a href="https://github.com/joaovmleite" class="text-amber-400">@joaovmleite</a>,
+            Geprototyped door <a href="https://twitter.com/joaovmleite" target="_blank" class="text-amber-400">@joaovmleite</a>,
             Geïnspireerd door <a href="https://github.com/monkeytypegame/monkeytype" class="text-amber-400">@monkeytype</a>
         </p>
 
-        <!-- Typing area -->
         <div id="typing-area" class="w-full max-w-4xl p-6 rounded-lg text-xl leading-relaxed text-gray-400 focus:outline-none relative">
             <div id="words-container" class="flex flex-wrap gap-x-2 gap-y-2 mb-4 text-center"></div>
         </div>
 
-        <!-- Timer, Time Options and Restart button -->
         <div id="controls-container" class="flex items-center justify-center mt-8 opacity-0">
             <div class="controls-bar flex items-center space-x-6">
-                <!-- Time Options -->
                 <div id="timer-options" class="flex space-x-2">
                     <button class="timer-option active" data-time="30">30s</button>
                     <button class="timer-option" data-time="60">60s</button>
                     <button class="timer-option" data-time="90">90s</button>
                 </div>
                 <span class="separator">|</span>
-                <!-- Timer Display -->
+
                 <div id="timer-display" class="text-5xl font-bold text-gray-100">30</div>
                 <span class="separator">|</span>
-                <!-- Action Buttons -->
+
                 <div class="flex items-center space-x-4">
                     <button id="restart-button" class="bg-gray-700 hover:bg-gray-600 text-gray-100 py-3 px-6 rounded-full transition-colors duration-200 focus:outline-none">Opnieuw</button>
                     <button id="toggle-sound-button" class="sound-btn font-bold py-3 px-6 rounded-full transition-colors duration-200 focus:outline-none"></button>
@@ -63,7 +60,6 @@
             </div>
         </div>
 
-        <!-- Results section (initially hidden) -->
         <div id="results-area" class="w-full max-w-lg p-8 rounded-lg bg-gray-800 shadow-xl opacity-0 scale-95 absolute hidden">
             <h2 class="text-4xl font-bold text-gray-100 mb-4 text-center">Resultaten</h2>
             <div class="space-y-4">
@@ -80,6 +76,7 @@
                     <span id="consistency-value" class="text-white font-bold">0%</span>
                 </div>
             </div>
+
             <!-- Canvas for the Chart.js chart -->
             <div class="mt-8">
                 <canvas id="results-chart"></canvas>
@@ -93,7 +90,6 @@
         <input type="text" id="hidden-input" class="absolute top-0 left-0 w-0 h-0 opacity-0" autofocus>
     </main>
 
-    <!-- Contact Section (initially hidden) -->
     <section id="contact-section" class="hidden absolute inset-0 flex-col items-center justify-center p-4 text-center">
         <h2 class="text-5xl font-bold text-gray-100 mb-6">Neem contact op</h2>
         <p class="text-xl text-gray-400 max-w-2xl mb-8">Als je suggesties of feedback hebt, een bug wilt melden of gewoon even gedag wilt zeggen, kun je me vinden op sociale media.</p>
@@ -105,6 +101,6 @@
         </div>
     </section>
 
-    <script src="./main.js" type="text/javascript"></script>
+    <script src="./src/main.js" type="module"></script>
 </body>
 </html>
