@@ -50,7 +50,7 @@ This is a static web project and requires no complex installation. To run it loc
 
 ## 🙏 Acknowledgements
 
-*   Prototyped by @mnnbaek
+*   Prototyped by @joaovmleite
 *   Inspired by @monkeytype
 
-### COPYRIGHT © 2025 - @mnnbaek
+### COPYRIGHT © 2025 - @joaovmleite
